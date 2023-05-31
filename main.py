@@ -141,7 +141,7 @@ DomainEntry.insert(0, "lms.ui.ac.ir")
 DomainEntry.pack()
 DomainEntry.bind("<FocusIn>", delete_temp_entry)
 
-Button = tk.Button(text="get all queries", foreground="white", background="#71ebac", border="2px solid", command=lambda: print_input(DNSNameServerEntry.get()))
+Button = tk.Button(text="get all queries", foreground="white", background="#71ebac", border="2px solid", command=lambda: print_input(DomainEntry.get(), [DNSNameServerEntry.get()]))
 Button.pack()
 
 window.resizable(False, False)
