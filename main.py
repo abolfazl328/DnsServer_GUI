@@ -117,9 +117,12 @@ def print_input(domain, name_server):
     #     print(f"{record_type} record: {', '.join(record_values)}")
 
 
-def delete_temp_entry(e):
-    e.delete(0, "end")
+def delete_dns_server_temp_entry(e):
+    DNSNameServerEntry.delete(0, "end")
 
+
+def delete_domain_temp_entry(e):
+    DomainEntry.delete(0, "end")
 
 
 window = tk.Tk()
@@ -131,7 +134,7 @@ DNSNameServer.pack()
 DNSNameServerEntry = tk.Entry()
 DNSNameServerEntry.insert(0, "8.8.8.8")
 DNSNameServerEntry.pack()
-DNSNameServerEntry.bind("<FocusIn>", delete_temp_entry)
+DNSNameServerEntry.bind("<FocusIn>", delete_dns_server_temp_entry)
 
 Domain = tk.Label(text="Domain")
 Domain.pack()
@@ -139,13 +142,17 @@ Domain.pack()
 DomainEntry = tk.Entry()
 DomainEntry.insert(0, "lms.ui.ac.ir")
 DomainEntry.pack()
-DomainEntry.bind("<FocusIn>", delete_temp_entry)
+DomainEntry.bind("<FocusIn>", delete_domain_temp_entry)
 
 Button = tk.Button(text="get all queries", foreground="white", background="#71ebac", border="2px solid", command=lambda: print_input(DomainEntry.get(), [DNSNameServerEntry.get()]))
 Button.pack()
+
+textBox = tk.Text()
+textBox.configure(state='disabled')
+textBox.insert("hello world")
+textBox.pack()
 
 window.resizable(False, False)
 window.geometry("400x400")
 window.mainloop()
 # Query the DNS server
-
