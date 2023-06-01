@@ -110,19 +110,20 @@ def print_input(domain, name_server, text_box):
     except dns.resolver.NoAnswer:
         pass
 
-
     text_box.delete("1.0", "end")
+    v.config(command=text_box.yview)
     text_box.pack()
 
     print(f"DNS records for {domain}:")
     for record_type, record_values in records.items():
         print(f"{record_type} record: {', '.join(record_values)}")
         text_box.insert("end", f"{record_type}: record: {', '.join(record_values)}\n")
-        text_box.tag_add("red", str(int(text_box.index('end').split('.')[0]) - 2) + ".0", str(int(text_box.index('end').split('.')[0]) - 2) + "." + str(len(record_type) + 1))
+        text_box.tag_add("red", str(int(text_box.index('end').split('.')[0]) - 2) + ".0",
+                         str(int(text_box.index('end').split('.')[0]) - 2) + "." + str(len(record_type) + 1))
         text_box.tag_configure("red", foreground="red")
         text_box.tag_configure("blue", foreground="blue")
-        text_box.tag_add("blue", str(int(text_box.index('end').split('.')[0]) - 2) + "." + str(len(record_type) + 2), str(int(text_box.index('end').split('.')[0]) - 1) + ".0")
-
+        text_box.tag_add("blue", str(int(text_box.index('end').split('.')[0]) - 2) + "." + str(len(record_type) + 2),
+                         str(int(text_box.index('end').split('.')[0]) - 1) + ".0")
 
 
 def delete_dns_server_temp_entry(e):
@@ -156,7 +157,8 @@ v = tk.Scrollbar(window, orient='vertical')
 v.pack(side=tk.RIGHT, fill='y')
 textBox = tk.Text(yscrollcommand=v.set)
 
-Button = tk.Button(text="get all queries", foreground="white", background="#71ebac", border="2px solid", command=lambda: print_input(DomainEntry.get(), [DNSNameServerEntry.get()], textBox))
+Button = tk.Button(text="get all queries", foreground="white", background="#71ebac", border="2px solid",
+                   command=lambda: print_input(DomainEntry.get(), [DNSNameServerEntry.get()], textBox))
 Button.pack()
 
 window.resizable(False, False)
