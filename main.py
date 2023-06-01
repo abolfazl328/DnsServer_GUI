@@ -111,6 +111,7 @@ def print_input(domain, name_server, text_box):
         pass
 
     text_box.delete("1.0", "end")
+    v.pack(side=tk.RIGHT, fill='y')
     v.config(command=text_box.yview)
     text_box.pack()
 
@@ -135,31 +136,31 @@ def delete_domain_temp_entry(e):
 
 
 window = tk.Tk()
+window.config(bg='#F7E5D0')
 window.title("DNS_SERVER")
 
-DNSNameServer = tk.Label(text="Dns name server:")
+DNSNameServer = tk.Label(text="Dns name server:", font=("Arial", 14), bg='#F7E5D0')
 DNSNameServer.pack()
 
-DNSNameServerEntry = tk.Entry()
+DNSNameServerEntry = tk.Entry(bg="#ffffff", fg="#333333", highlightcolor="#2196f3", highlightthickness=2, font=("Arial", 14))
 DNSNameServerEntry.insert(0, "8.8.8.8")
 DNSNameServerEntry.pack()
 DNSNameServerEntry.bind("<FocusIn>", delete_dns_server_temp_entry)
 
-Domain = tk.Label(text="Domain:")
+Domain = tk.Label(text="Domain:", font=("Arial", 14), bg='#F7E5D0')
 Domain.pack()
 
-DomainEntry = tk.Entry()
+DomainEntry = tk.Entry(bg="#ffffff", fg="#333333", highlightcolor="#2196f3", highlightthickness=2, font=("Arial", 14))
 DomainEntry.insert(0, "lms.ui.ac.ir")
 DomainEntry.pack()
 DomainEntry.bind("<FocusIn>", delete_domain_temp_entry)
 
 v = tk.Scrollbar(window, orient='vertical')
-v.pack(side=tk.RIGHT, fill='y')
-textBox = tk.Text(yscrollcommand=v.set)
+textBox = tk.Text(yscrollcommand=v.set, font=("Arial", 14), bg='#FFF5EE')
 
-Button = tk.Button(text="get all queries", foreground="white", background="#71ebac", border="2px solid",
+Button = tk.Button(text="get all queries", font=("Arial", 14), foreground="#212121", background="#2196f3", border="2px solid",
                    command=lambda: print_input(DomainEntry.get(), [DNSNameServerEntry.get()], textBox))
-Button.pack()
+Button.pack(pady=5)
 
 window.resizable(False, False)
 window.geometry("400x400")
