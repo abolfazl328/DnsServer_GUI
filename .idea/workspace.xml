@@ -4,13 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9cfc1fc7-7ecb-4704-8e79-3c211e7da5fc" name="Changes" comment="git ignore updated." />
+    <list default="true" id="9cfc1fc7-7ecb-4704-8e79-3c211e7da5fc" name="Changes" comment="git ignore fixed." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -131,7 +136,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685699919559</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="git ignore fixed.">
+      <created>1685700917853</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1685700917853</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -145,7 +157,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="HEAD" />
+                        <option value="main" />
                       </list>
                     </value>
                   </entry>
@@ -168,6 +180,7 @@
     <MESSAGE value="bugs fixed and read me file completed." />
     <MESSAGE value="ui updated" />
     <MESSAGE value="git ignore updated." />
-    <option name="LAST_COMMIT_MESSAGE" value="git ignore updated." />
+    <MESSAGE value="git ignore fixed." />
+    <option name="LAST_COMMIT_MESSAGE" value="git ignore fixed." />
   </component>
 </project>
