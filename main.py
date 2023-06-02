@@ -123,8 +123,8 @@ def print_input(domain, name_server, text_box):
         text_box.insert("end", f"{record_type}: record: {', '.join(record_values)}\n")
         text_box.tag_add("red", str(int(text_box.index('end').split('.')[0]) - 2) + ".0",
                          str(int(text_box.index('end').split('.')[0]) - 2) + "." + str(len(record_type) + 1))
-        text_box.tag_configure("red", foreground="red")
-        text_box.tag_configure("blue", foreground="blue")
+        text_box.tag_configure("red", foreground="#A53860")
+        text_box.tag_configure("blue", foreground="#450920")
         text_box.tag_add("blue", str(int(text_box.index('end').split('.')[0]) - 2) + "." + str(len(record_type) + 2),
                          str(int(text_box.index('end').split('.')[0]) - 1) + ".0")
 
@@ -149,7 +149,7 @@ window.title("DNS_SERVER")
 DNSNameServer = tk.Label(text="Dns name server:", font=("Arial", 14), bg='#F7E5D0')
 DNSNameServer.grid(row=0, column=0, padx=5, pady=5)
 
-DNSNameServerEntry = tk.Entry(bg="#ffffff", fg="#FFA5AB", highlightcolor="#2196f3", highlightthickness=2, font=("Arial", 14))
+DNSNameServerEntry = tk.Entry(bg="#FFA5AB", fg="black", highlightcolor="#2196f3", highlightthickness=2, font=("Arial", 14))
 DNSNameServerEntry.insert(0, "8.8.8.8")
 DNSNameServerEntry.grid(row=0, column=1, padx=5, pady=5)
 DNSNameServerEntry.bind("<FocusIn>", delete_dns_server_temp_entry)
@@ -157,7 +157,7 @@ DNSNameServerEntry.bind("<FocusIn>", delete_dns_server_temp_entry)
 Domain = tk.Label(text="Domain:", font=("Arial", 14), bg='#F7E5D0')
 Domain.grid(row=1, column=0, padx=5, pady=5)
 
-DomainEntry = tk.Entry(bg="#ffffff", fg="#333333", highlightcolor="#2196f3", highlightthickness=2, font=("Arial", 14))
+DomainEntry = tk.Entry(bg="#FFA5AB", fg="black", highlightcolor="#2196f3", highlightthickness=2, font=("Arial", 14))
 DomainEntry.insert(0, "lms.ui.ac.ir")
 DomainEntry.grid(row=1, column=1, padx=5, pady=5)
 DomainEntry.bind("<FocusIn>", delete_domain_temp_entry)
@@ -165,13 +165,13 @@ DomainEntry.bind("<FocusIn>", delete_domain_temp_entry)
 v = tk.Scrollbar(window, orient='vertical')
 textBox = tk.Text(yscrollcommand=v.set, font=("Arial", 14), bg='#FFF5EE')
 
-Button = tk.Button(text="get all queries", font=("Arial", 14), foreground="#A53860", background="#2196f3", border="2px solid",
+Button = tk.Button(text="get all queries", font=("Arial", 14), foreground="black", background="#DA627D", border="2px solid",
                    command=lambda: print_input(DomainEntry.get(), [DNSNameServerEntry.get()], textBox))
 Button.grid(row=2, column=0, columnspan=2, padx=5, pady=5)
 Button.grid_configure(sticky="we")
 
 window.resizable(False, False)
-window.geometry("360x400")
+window.geometry("390x400")
 window.mainloop()
 
 # Query the DNS server
