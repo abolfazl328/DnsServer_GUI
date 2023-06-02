@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9cfc1fc7-7ecb-4704-8e79-3c211e7da5fc" name="Changes" comment="git ignore fixed." />
+    <list default="true" id="9cfc1fc7-7ecb-4704-8e79-3c211e7da5fc" name="Changes" comment="branch added">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -143,7 +146,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685700917853</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="branch added">
+      <created>1685702366241</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1685702366241</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -157,7 +167,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="main" />
+                        <option value="diffrent_ui" />
                       </list>
                     </value>
                   </entry>
@@ -181,6 +191,7 @@
     <MESSAGE value="ui updated" />
     <MESSAGE value="git ignore updated." />
     <MESSAGE value="git ignore fixed." />
-    <option name="LAST_COMMIT_MESSAGE" value="git ignore fixed." />
+    <MESSAGE value="branch added" />
+    <option name="LAST_COMMIT_MESSAGE" value="branch added" />
   </component>
 </project>
