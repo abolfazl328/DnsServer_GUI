@@ -138,7 +138,7 @@ def delete_domain_temp_entry(e):
 
 
 window = tk.Tk()
-window.config(bg='#F9DBBD')
+window.config(bg='#FFD8DB')
 window.grid_rowconfigure(2, minsize=0)
 window.grid_rowconfigure(3, weight=1)
 window.grid_columnconfigure(0, weight=1)
