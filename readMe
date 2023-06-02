@@ -1,6 +1,0 @@
-Dns server GUI
-
-In this project you giv the dns name server like "8.8.8.8" and the website name like "yahoo.com" and then when u press
-the button that says get all queries, in a few seconds it will print all the queries with different types.
-
-the end.
